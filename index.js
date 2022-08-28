@@ -1,14 +1,29 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  // look through each number in the array
+  for (let i = 0; i < array.length; i++) {
+    // look through the rest of the numbers
+    for (let j = i+1; j < array.length; j++) {
+      // check if the sum adds up to the target
+      if (array[i] + array[j] ===target) return true;
+              
+    }
+    
+  }
+  return false;
 }
+
 
 /* 
   Write the Big O time complexity of your function here
 */
-
+//0(n*n)
 /* 
   Add your pseudocode here
 */
+// write a code that looks through the array to find two numbers that when added add up to the target
+//one count starts at index 0 (i) while the other starts index 1(j)
 
 /*
   Add written explanation of your solution here
